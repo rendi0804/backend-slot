@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Slot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Game Slot</h1>
+        <div id="slot-machine">
+            <span id="slot1">🍒</span>
+            <span id="slot2">🍇</span>
+            <span id="slot3">🍋</span>
+        </div>
+        <button id="spin-button">Spin</button>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Slot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Game Slot</h1>
+        <div id="slot-machine">
+            <span id="slot1">🍒</span>
+            <span id="slot2">🍇</span>
+            <span id="slot3">🍋</span>
+        </div>
+        <button id="spin-button">Spin</button>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Slot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Game Slot</h1>
+        <div id="slot-machine">
+            <span id="slot1">🍒</span>
+            <span id="slot2">🍇</span>
+            <span id="slot3">🍋</span>
+        </div>
+        <button id="spin-button">Spin</button>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    margin-top: 50px;
+}
+#slot-machine {
+    font-size: 50px;
+    margin: 20px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218838;
+}
+document.getElementById("spin-button").addEventListener("click", function () {
+    const symbols = ["🍒", "🍇", "🍋", "⭐", "🍎"];
+    const slot1 = symbols[Math.floor(Math.random() * symbols.length)];
+    const slot2 = symbols[Math.floor(Math.random() * symbols.length)];
+    const slot3 = symbols[Math.floor(Math.random() * symbols.length)];
+
+    document.getElementById("slot1").textContent = slot1;
+    document.getElementById("slot2").textContent = slot2;
+    document.getElementById("slot3").textContent = slot3;
+
+    const result = document.getElementById("result");
+    if (slot1 === slot2 && slot2 === slot3) {
+        result.textContent = "Selamat! Kamu menang!";
+    } else {
+        result.textContent = "Coba lagi!";
+    }
+});
